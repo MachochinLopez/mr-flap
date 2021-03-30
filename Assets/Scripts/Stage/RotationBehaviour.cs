@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class RotationBehaviour : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed;   // Velocidad de rotación.
+    [SerializeField] private float speed = 5f;
 
-    // Cada frame gira el objeto.
+    // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.forward, speed * Time.deltaTime);
     }
 }
